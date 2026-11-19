@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="The Workshop Edit — a creative space for workshops, ideas and making things by hand.">
+
+    <title>The Workshop Edit — Find Your Creative Side</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="header" id="top">
+        <a href="#top" class="logo">the workshop<span>edit.</span></a>
+
+        <button class="menu-toggle" id="menuToggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="navLinks">
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="#experience">The experience</a>
+            <a href="#workshops">Workshops</a>
+            <a href="#studio">Our studio</a>
+            <a href="#contact" class="nav-contact">Let's create ↗</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- CINEMATIC HERO -->
+        <section class="hero">
+
+            <div class="hero-background">
+                <img
+                    src="https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?w=2000&auto=format&fit=crop&q=90"
+                    alt="An inspiring creative workspace">
+            </div>
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <p class="hero-label">A SPACE TO EXPLORE · CREATE · CONNECT</p>
+
+                <h1>
+                    Find your<br>
+                    <em>creative</em> side.
+                </h1>
+
+                <div class="hero-bottom">
+                    <p>
+                        Try something new. Get your hands dirty.
+                        Discover what happens when you make time
+                        for creativity.
+                    </p>
+
+                    <a href="#workshops" class="hero-button">
+                        EXPLORE WORKSHOPS
+                        <span>↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-side-label">
+                INSPIRATION LIVES HERE
+            </div>
+
+            <div class="hero-scroll">
+                SCROLL TO EXPLORE <span>↓</span>
+            </div>
+
+        </section>
+
+
+        <!-- INTRODUCTION -->
+        <section class="intro section-padding" id="experience">
+
+            <div class="intro-top" data-reveal>
+                <span class="eyebrow">01 — THE EXPERIENCE</span>
+                <span class="intro-note">A DIFFERENT KIND OF CREATIVE SPACE</span>
+            </div>
+
+            <div class="intro-layout">
+
+                <h2 data-reveal>
+                    Not everything needs to be
+                    <em>productive.</em>
+                </h2>
+
+                <div class="intro-copy" data-reveal>
+                    <p>
+                        Sometimes, you just need to make something
+                        with your hands. To experiment, make mistakes,
+                        meet interesting people and enjoy the process.
+                    </p>
+
+                    <p>
+                        That's what we're here for. A welcoming space
+                        where curiosity matters more than experience.
+                    </p>
+
+                    <a href="#studio" class="text-link">
+                        GET TO KNOW OUR SPACE ↗
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="intro-image" data-reveal>
+                <img
+                    src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1600&auto=format&fit=crop&q=85"
+                    alt="A creative desk with materials ready for a project">
+                <span>MAKE TIME FOR YOURSELF.</span>
+            </div>
+
+        </section>
+
+
+        <!-- WORKSHOP EXPLORER -->
+        <section class="workshops section-padding" id="workshops">
+
+            <div class="section-heading" data-reveal>
+                <div>
+                    <span class="eyebrow">02 — FIND YOUR THING</span>
+                    <h2>What will you <em>make?</em></h2>
+                </div>
+
+                <p>
+                    Three starting points.<br>
+                    Endless ways to make them yours.
+                </p>
+            </div>
+
+            <div class="workshop-explorer">
+
+                <div class="workshop-options" role="tablist"
+                    aria-label="Explore our workshops">
+
+                    <button class="workshop-option active"
+                        type="button"
+                        role="tab"
+                        aria-selected="true"
+                        data-workshop="pottery">
+                        <span>01</span>
+                        <span>Pottery & Clay</span>
+                        <span class="option-arrow">↗</span>
+                    </button>
+
+                    <button class="workshop-option"
+                        type="button"
+                        role="tab"
+                        aria-selected="false"
+                        data-workshop="painting">
+                        <span>02</span>
+                        <span>Painting & Colour</span>
+                        <span class="option-arrow">↗</span>
+                    </button>
+
+                    <button class="workshop-option"
+                        type="button"
+                        role="tab"
+                        aria-selected="false"
+                        data-workshop="photography">
+                        <span>03</span>
+                        <span>Photography Walks</span>
+                        <span class="option-arrow">↗</span>
+                    </button>
+
+                </div>
+
+
+                <div class="workshop-preview">
+
+                    <div class="preview-image">
+                        <img
+                            id="workshopImage"
+                            src="https://images.unsplash.com/photo-1422246358533-95dcd3d48961?w=1200&auto=format&fit=crop&q=85"
+                            alt="Pottery workshop">
+                        <span class="preview-number" id="previewNumber">01 / 03</span>
+                    </div>
+
+                    <div class="preview-content">
+
+                        <span class="eyebrow" id="workshopCategory">
+                            HAND-BUILDING · BEGINNER FRIENDLY
+                        </span>
+
+                        <h3 id="workshopTitle">
+                            A little time<br>with <em>clay.</em>
+                        </h3>
+
+                        <p id="workshopDescription">
+                            Shape, mould and create something
+                            of your own. Discover the joy of working
+                            with clay, one piece at a time.
+                        </p>
+
+                        <a href="#contact" class="preview-link">
+                            DISCOVER THIS WORKSHOP ↗
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- VISUAL GALLERY -->
+        <section class="gallery section-padding">
+
+            <div class="gallery-heading" data-reveal>
+                <span class="eyebrow">03 — LITTLE MOMENTS, BIG IDEAS</span>
+                <h2>Made by hand.<br><em>Remembered forever.</em></h2>
+            </div>
+
+            <div class="gallery-grid">
+
+                <figure class="gallery-item gallery-large" data-reveal>
+                    <img
+                        src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=1200&auto=format&fit=crop&q=85"
+                        alt="Colourful art materials and painting">
+                    <figcaption>01 — THE JOY OF COLOUR</figcaption>
+                </figure>
+
+                <figure class="gallery-item gallery-small" data-reveal>
+                    <img
+                        src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=900&auto=format&fit=crop&q=85"
+                        alt="A camera used for creative photography">
+                    <figcaption>02 — SEE DIFFERENTLY</figcaption>
+                </figure>
+
+                <figure class="gallery-item gallery-small" data-reveal>
+                    <img
+                        src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=900&auto=format&fit=crop&q=85"
+                        alt="A calm creative workspace">
+                    <figcaption>03 — FIND YOUR FLOW</figcaption>
+                </figure>
+
+                <figure class="gallery-item gallery-large" data-reveal>
+                    <img
+                        src="https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?w=1200&auto=format&fit=crop&q=85"
+                        alt="An inspiring creative studio">
+                    <figcaption>04 — ROOM TO EXPERIMENT</figcaption>
+                </figure>
+
+            </div>
+
+        </section>
+
+
+        <!-- STUDIO -->
+        <section class="studio section-padding" id="studio">
+
+            <div class="studio-image" data-reveal>
+                <img
+                    src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=1400&auto=format&fit=crop&q=85"
+                    alt="A welcoming creative studio interior">
+            </div>
+
+            <div class="studio-content" data-reveal>
+                <span class="eyebrow">04 — A PLACE TO BELONG</span>
+
+                <h2>Come curious.<br>Leave a little <em>different.</em></h2>
+
+                <p>
+                    No grades, no pressure, no need to get it right
+                    the first time. Just good people, interesting
+                    materials and the freedom to explore.
+                </p>
+
+                <a href="#contact" class="text-link">
+                    COME MAKE SOMETHING WITH US ↗
+                </a>
+            </div>
+
+        </section>
+
+
+        <!-- FINAL CTA -->
+        <section class="contact-section" id="contact">
+
+            <div class="contact-inner" data-reveal>
+                <span class="eyebrow">YOUR NEXT CREATIVE CHAPTER</span>
+
+                <h2>
+                    Make space<br>
+                    for <em>something new.</em>
+                </h2>
+
+                <p>
+                    Your next favourite thing might be something
+                    you've never tried.
+                </p>
+
+                <a href="mailto:hello@example.com" class="contact-button">
+                    LET'S GET CREATIVE ↗
+                </a>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <a href="#top" class="logo">the workshop<span>edit.</span></a>
+
+        <p>AN INDEPENDENT SPACE FOR CREATIVE EXPLORATION.</p>
+
+        <a href="#top">BACK TO TOP ↑</a>
+
+        <span>© 2026 THE WORKSHOP EDIT</span>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
