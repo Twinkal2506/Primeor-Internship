@@ -1,0 +1,344 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --ink: #20203b;
+    --muted: #77768f;
+    --purple: #7657e8;
+    --coral: #ff796d;
+    --yellow: #ffd66b;
+    --cyan: #72d9d0;
+    --surface: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: #f8f6ff;
+    color: var(--ink);
+    transition: background 0.4s ease;
+    min-height: 100vh;
+}
+
+.navbar {
+    min-height: 78px;
+    padding: 0 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.85);
+    border-bottom: 1px solid #eeebf7;
+}
+
+.logo {
+    font-family: 'Manrope', sans-serif;
+    font-size: 23px;
+    font-weight: 800;
+    color: var(--ink);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--purple);
+}
+
+.nav-label {
+    background: #f0ebff;
+    color: var(--purple);
+    padding: 9px 15px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.container {
+    width: min(1120px, 86%);
+    margin: auto;
+}
+
+.hero {
+    padding: 85px 0 55px;
+    text-align: center;
+}
+
+.eyebrow {
+    display: inline-block;
+    background: #eee9ff;
+    color: var(--purple);
+    padding: 9px 17px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.hero h1 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(40px, 6vw, 68px);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -2.5px;
+    margin: 23px 0 17px;
+}
+
+.hero h1 span {
+    background: linear-gradient(100deg, #7657e8, #ff796d);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero p {
+    max-width: 540px;
+    margin: auto;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    background: var(--surface);
+    padding: 29px;
+    border: 1px solid #eeebf6;
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(56, 40, 100, 0.055);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 42px rgba(56, 40, 100, 0.11);
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+}
+
+.color-card::before {
+    background: var(--purple);
+}
+
+.greeting-card::before {
+    background: var(--coral);
+}
+
+.calculator-card::before {
+    background: var(--cyan);
+}
+
+.card-number {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    color: #a09bb5;
+}
+
+.icon {
+    width: 62px;
+    height: 62px;
+    display: grid;
+    place-items: center;
+    border-radius: 17px;
+    font-size: 29px;
+    margin: 25px 0 19px;
+}
+
+.color-card .icon {
+    background: #f0eaff;
+}
+
+.greeting-card .icon {
+    background: #fff0ed;
+}
+
+.calculator-card .icon {
+    background: #e8faf7;
+}
+
+.card h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+    min-height: 48px;
+    margin-bottom: 23px;
+}
+
+.primary-button {
+    width: 100%;
+    padding: 14px 16px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.color-card .primary-button {
+    background: var(--purple);
+}
+
+.greeting-card .primary-button {
+    background: var(--coral);
+}
+
+.calculator-card .primary-button {
+    background: #28aa9e;
+}
+
+.primary-button:hover {
+    filter: brightness(0.94);
+    transform: translateY(-2px);
+}
+
+.primary-button:active {
+    transform: scale(0.98);
+}
+
+.calculator-inputs {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 15px;
+}
+
+.calculator-inputs input {
+    width: 100%;
+    min-width: 0;
+    padding: 13px 10px;
+    border: 1px solid #e5e2ed;
+    border-radius: 9px;
+    outline: none;
+    font-family: inherit;
+    font-size: 14px;
+    background: #fcfbff;
+}
+
+.calculator-inputs input:focus {
+    border-color: #28aa9e;
+    box-shadow: 0 0 0 3px rgba(40,170,158,0.1);
+}
+
+.operator {
+    font-weight: 800;
+    font-size: 19px;
+    color: #28aa9e;
+}
+
+.result {
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-radius: 9px;
+    background: #e8faf7;
+    color: #218d83;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    overflow-wrap: anywhere;
+}
+
+.bottom-note {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    margin: 43px 0;
+    color: #9993aa;
+    font-size: 12px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #36bd8d;
+    border-radius: 50%;
+}
+
+footer {
+    text-align: center;
+    padding: 25px 15px;
+    border-top: 1px solid #eeebf6;
+    color: #9993aa;
+    font-size: 12px;
+}
+
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid rgba(118, 87, 232, 0.35);
+    outline-offset: 3px;
+}
+
+@media (max-width: 850px) {
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .calculator-card {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 550px) {
+    .navbar {
+        padding: 0 6%;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .nav-label {
+        font-size: 9px;
+        padding: 8px 10px;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .hero {
+        padding: 60px 0 38px;
+    }
+
+    .hero h1 {
+        letter-spacing: -1.5px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .calculator-card {
+        grid-column: auto;
+    }
+}

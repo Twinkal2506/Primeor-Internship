@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Playground | Interactive JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#" class="logo">JS<span>Playground.</span></a>
+        <span class="nav-label">LEVEL 1 · TASK 2</span>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <span class="eyebrow">INTERACTIVE JAVASCRIPT</span>
+            <h1>Make things <span>happen.</span></h1>
+            <p>Explore the power of JavaScript through simple, interactive experiences.</p>
+        </section>
+
+        <section class="features">
+
+            <!-- Background Color Changer -->
+            <article class="card color-card">
+                <div class="card-number">01 / INTERACTION</div>
+                <div class="icon">🎨</div>
+                <h2>Color Studio</h2>
+                <p>Change the background color with one click.</p>
+                <button id="colorButton" class="primary-button">
+                    Change Background
+                </button>
+            </article>
+
+            <!-- Time-Based Greeting -->
+            <article class="card greeting-card">
+                <div class="card-number">02 / TIME DETECTION</div>
+                <div class="icon">⏰</div>
+                <h2>Time Greeting</h2>
+                <p>Get a greeting based on your computer's current time.</p>
+                <button id="greetingButton" class="primary-button">
+                    Get My Greeting
+                </button>
+            </article>
+
+            <!-- Addition Calculator -->
+            <article class="card calculator-card">
+                <div class="card-number">03 / CALCULATION</div>
+                <div class="icon">🧮</div>
+                <h2>Quick Calculator</h2>
+                <p>Enter two numbers and calculate their sum instantly.</p>
+
+                <div class="calculator-inputs">
+                    <input type="number" id="numberOne" placeholder="First number">
+                    <span class="operator">+</span>
+                    <input type="number" id="numberTwo" placeholder="Second number">
+                </div>
+
+                <div class="result" id="result" aria-live="polite">
+                    Result will appear here
+                </div>
+
+                <button id="calculateButton" class="primary-button">
+                    Calculate Sum
+                </button>
+            </article>
+
+        </section>
+
+        <section class="bottom-note">
+            <span class="status-dot"></span>
+            Built with HTML, CSS and JavaScript
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 JS Playground. Created for Primeor Solutions Internship.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
