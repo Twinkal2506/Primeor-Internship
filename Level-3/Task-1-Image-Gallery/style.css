@@ -1,0 +1,1058 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600;6..96,700&family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
+
+/* =========================================
+   AFTERIMAGE — HER BEAUTY. HER POWER.
+   An editorial exhibition celebrating women.
+========================================= */
+
+:root {
+    --paper: #f1ece4;
+    --paper-deep: #e7ded3;
+    --ink: #211b1a;
+    --wine: #702b35;
+    --red: #a8323c;
+    --muted: #827773;
+    --line: rgba(33, 27, 26, 0.2);
+
+    --display: 'Archivo Black', sans-serif;
+    --serif: 'Bodoni Moda', serif;
+    --body: 'DM Sans', sans-serif;
+    --mono: 'DM Mono', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.site-header {
+    min-height: 82px;
+    padding: 0 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    position: relative;
+    z-index: 20;
+}
+
+.brand {
+    font-family: var(--display);
+    font-size: 21px;
+    letter-spacing: -1.5px;
+    white-space: nowrap;
+}
+
+.brand span {
+    color: var(--red);
+    font-family: var(--mono);
+    font-size: 10px;
+    vertical-align: top;
+    margin-left: 3px;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.main-nav a,
+.header-note {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.main-nav a {
+    position: relative;
+    color: var(--muted);
+    transition: color 0.25s ease;
+}
+
+.main-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 1px;
+    background: var(--red);
+    transition: width 0.25s ease;
+}
+
+.main-nav a:hover {
+    color: var(--red);
+}
+
+.main-nav a:hover::after {
+    width: 100%;
+}
+
+.header-note {
+    color: var(--muted);
+    text-align: right;
+    line-height: 1.8;
+}
+
+.header-note span {
+    display: block;
+    color: var(--red);
+}
+
+/* =========================================
+   HERO — THE COVER
+========================================= */
+
+.hero {
+    min-height: 700px;
+    height: calc(100svh - 82px);
+    max-height: 920px;
+    padding: 34px 6% 28px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    isolation: isolate;
+
+    color: #fff8f0;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(32, 10, 13, 0.78) 0%,
+            rgba(32, 10, 13, 0.42) 43%,
+            rgba(32, 10, 13, 0.04) 100%
+        ),
+        linear-gradient(
+            0deg,
+            rgba(32, 10, 13, 0.48),
+            transparent 45%
+        ),
+        url("https://images.pexels.com/photos/37358468/pexels-photo-37358468/free-photo-of-elegant-portrait-of-a-woman-in-traditional-indian-attire.jpeg?auto=compress&dpr=1&h=750&w=1260");
+
+    background-size: cover;
+    background-position: center 35%;
+    background-repeat: no-repeat;
+}
+
+.hero-meta,
+.hero-title,
+.hero-bottom {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-meta,
+.hero-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.hero-meta {
+    color: rgba(255, 248, 240, 0.8);
+}
+
+.hero-title {
+    max-width: 850px;
+}
+
+.eyebrow {
+    margin-bottom: 24px;
+    color: #f0b6a9;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.hero-title h1 {
+    max-width: 100%;
+    font-family: var(--display);
+    font-size: clamp(65px, 10.5vw, 145px);
+    font-weight: 400;
+    line-height: 0.83;
+    letter-spacing: -0.075em;
+    overflow-wrap: normal;
+}
+
+.hero-title h1 span {
+    color: #f0c5b7;
+    font-family: var(--serif);
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: -0.065em;
+}
+
+.hero-description {
+    margin-top: 34px;
+    color: rgba(255, 248, 240, 0.88);
+    font-family: var(--body);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.hero-bottom {
+    color: rgba(255, 248, 240, 0.72);
+}
+
+.hero-bottom a {
+    color: #f0b6a9;
+    transition: color 0.25s ease;
+}
+
+.hero-bottom a:hover {
+    color: white;
+}
+
+/* =========================================
+   INTRODUCTION
+========================================= */
+
+.archive-intro {
+    padding: 115px 10%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 55px;
+    align-items: start;
+    border-bottom: 1px solid var(--line);
+}
+
+.section-index {
+    color: var(--red);
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 1.2px;
+    line-height: 1.8;
+}
+
+.archive-intro > p {
+    max-width: 780px;
+    font-family: var(--serif);
+    font-size: clamp(27px, 3.6vw, 49px);
+    line-height: 1.35;
+    letter-spacing: -1.2px;
+}
+
+.archive-intro > p em {
+    color: var(--wine);
+    font-weight: 600;
+}
+
+/* =========================================
+   EXHIBITION HEADING
+========================================= */
+
+.archive-section {
+    padding: 105px 7% 125px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 65px;
+}
+
+.section-heading h2 {
+    margin-top: 18px;
+    font-family: var(--display);
+    font-size: clamp(48px, 8vw, 105px);
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: -0.075em;
+}
+
+.section-heading h2 span {
+    color: var(--red);
+}
+
+.image-count {
+    padding-bottom: 8px;
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+/* =========================================
+   EDITORIAL EXHIBITION
+   Static, asymmetrical, intentional.
+========================================= */
+
+.exhibition-stage {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-auto-flow: row;
+    align-items: start;
+    gap: 58px 25px;
+
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+    position: relative;
+    background: transparent;
+    border: none;
+    perspective: none;
+    isolation: auto;
+}
+
+.exhibition-stage::before {
+    content: "HER STORY. HER SPACE. HER RULES.";
+    position: absolute;
+    top: 31%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    color: rgba(112, 43, 53, 0.055);
+    font-family: var(--display);
+    font-size: clamp(35px, 7vw, 105px);
+    line-height: 0.9;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+/* Reset all old animated positioning */
+
+.exhibition-stage .gallery-item,
+.exhibition-stage .gallery-item:nth-child(n),
+.exhibition-stage .drift-1,
+.exhibition-stage .drift-2,
+.exhibition-stage .drift-3,
+.exhibition-stage .drift-4,
+.exhibition-stage .drift-5,
+.exhibition-stage .drift-6 {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    opacity: 1;
+    transform: none;
+    animation: none !important;
+    transition: none;
+    will-change: auto;
+    min-width: 0;
+}
+
+/* Six main photographs */
+
+.exhibition-stage .gallery-item:nth-child(1) {
+    grid-column: 1 / 8;
+}
+
+.exhibition-stage .gallery-item:nth-child(2) {
+    grid-column: 9 / 13;
+    margin-top: 105px;
+}
+
+.exhibition-stage .gallery-item:nth-child(3) {
+    grid-column: 2 / 6;
+    margin-top: 12px;
+}
+
+.exhibition-stage .gallery-item:nth-child(4) {
+    grid-column: 7 / 13;
+    margin-top: 65px;
+}
+
+.exhibition-stage .gallery-item:nth-child(5) {
+    grid-column: 1 / 6;
+    margin-top: 15px;
+}
+
+.exhibition-stage .gallery-item:nth-child(6) {
+    grid-column: 7 / 13;
+    margin-top: 105px;
+}
+
+/* Supporting photographs */
+
+.exhibition-stage .gallery-item-extra {
+    grid-column: span 4;
+    max-width: 88%;
+    margin-top: 5px;
+}
+
+.exhibition-stage .gallery-item-extra:nth-child(even) {
+    justify-self: end;
+}
+
+/* Image buttons */
+
+.exhibition-stage .gallery-item button,
+.image-trigger {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    overflow: hidden;
+    cursor: zoom-in;
+    clip-path: none;
+    text-align: left;
+}
+
+.exhibition-stage .gallery-item img,
+.image-trigger img {
+    display: block;
+    width: 100%;
+    height: 410px;
+    aspect-ratio: auto;
+    object-fit: cover;
+    filter: saturate(0.88);
+    transform: none;
+    transition:
+        filter 0.45s ease,
+        transform 0.65s cubic-bezier(.2, .7, .2, 1);
+}
+
+/* Different editorial image proportions */
+
+.exhibition-stage .gallery-item:nth-child(1) img {
+    height: 530px;
+}
+
+.exhibition-stage .gallery-item:nth-child(2) img {
+    height: 340px;
+}
+
+.exhibition-stage .gallery-item:nth-child(3) img {
+    height: 420px;
+}
+
+.exhibition-stage .gallery-item:nth-child(4) img {
+    height: 490px;
+}
+
+.exhibition-stage .gallery-item:nth-child(5) img {
+    height: 390px;
+}
+
+.exhibition-stage .gallery-item:nth-child(6) img {
+    height: 440px;
+}
+
+/* Extra images stay smaller */
+
+.exhibition-stage .gallery-item-extra img {
+    height: 245px;
+}
+
+/* Hover is restrained — no floating or rotation */
+
+.exhibition-stage .gallery-item:hover img {
+    filter: saturate(1.08);
+    transform: scale(1.025);
+}
+
+.image-caption {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0 0;
+
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+}
+
+.image-caption span:first-child {
+    color: var(--ink);
+}
+
+/* =========================================
+   CLOSING STATEMENT
+========================================= */
+
+.closing-note {
+    min-height: 490px;
+    padding: 105px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background: var(--wine);
+    color: var(--paper);
+}
+
+.closing-note .section-index {
+    color: #e6b1a5;
+}
+
+.closing-note h2 {
+    max-width: 1000px;
+    margin: 32px 0;
+    font-family: var(--display);
+    font-size: clamp(42px, 7.5vw, 100px);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.075em;
+}
+
+.closing-note h2 span {
+    color: #e6b1a5;
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 500;
+}
+
+.closing-note > p {
+    color: rgba(241, 236, 228, 0.72);
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 1.2px;
+    line-height: 1.8;
+    text-transform: uppercase;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+    min-height: 90px;
+    padding: 25px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background: var(--paper);
+    border-top: 1px solid var(--line);
+}
+
+.site-footer > span,
+.site-footer > a:last-child {
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.site-footer a:hover {
+    color: var(--red);
+}
+
+/* =========================================
+   LIGHTBOX
+========================================= */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 100px 10% 90px;
+    background: rgba(25, 17, 17, 0.98);
+    color: var(--paper);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+.lightbox.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.lightbox-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid rgba(241, 236, 228, 0.18);
+}
+
+.lightbox-brand {
+    font-family: var(--display);
+    font-size: 15px;
+    letter-spacing: -0.5px;
+}
+
+.lightbox-controls {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.slideshow-toggle {
+    border: none;
+    background: transparent;
+    color: #e6b1a5;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+
+.slideshow-toggle:hover {
+    color: white;
+}
+
+.lightbox-close {
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(241, 236, 228, 0.3);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--paper);
+    font-size: 17px;
+    cursor: pointer;
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+.lightbox-close:hover {
+    background: var(--paper);
+    color: var(--ink);
+}
+
+.lightbox-content {
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-content img {
+    display: block;
+    max-width: 100%;
+    max-height: 72vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    box-shadow: 0 20px 100px rgba(0, 0, 0, 0.35);
+}
+
+.lightbox-caption {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding-top: 20px;
+
+    color: rgba(241, 236, 228, 0.6);
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.lightbox-caption span:first-child {
+    color: #e6b1a5;
+}
+
+.slideshow-progress {
+    width: 100%;
+    height: 2px;
+    margin-top: 18px;
+    background: rgba(255, 255, 255, 0.15);
+    overflow: hidden;
+}
+
+.slideshow-progress-bar {
+    width: 0%;
+    height: 100%;
+    background: #e6b1a5;
+}
+
+.lightbox-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 48px;
+    height: 48px;
+
+    border: 1px solid rgba(241, 236, 228, 0.3);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--paper);
+    font-size: 23px;
+    cursor: pointer;
+
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+.lightbox-arrow:hover {
+    background: var(--paper);
+    color: var(--ink);
+}
+
+.lightbox-prev {
+    left: 4%;
+}
+
+.lightbox-next {
+    right: 4%;
+}
+
+.lightbox-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 22px 6%;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+
+    border-top: 1px solid rgba(241, 236, 228, 0.18);
+
+    color: rgba(241, 236, 228, 0.55);
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+    .site-header {
+        padding: 0 5%;
+    }
+
+    .main-nav {
+        gap: 20px;
+    }
+
+    .hero {
+        min-height: 620px;
+    }
+
+    .archive-intro {
+        padding: 85px 8%;
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .archive-section {
+        padding: 85px 6%;
+    }
+
+    .exhibition-stage {
+        gap: 42px 18px;
+    }
+
+    .exhibition-stage .gallery-item:nth-child(1) img,
+    .exhibition-stage .gallery-item:nth-child(4) img {
+        height: 420px;
+    }
+
+    .exhibition-stage .gallery-item:nth-child(2) img,
+    .exhibition-stage .gallery-item:nth-child(3) img,
+    .exhibition-stage .gallery-item:nth-child(5) img,
+    .exhibition-stage .gallery-item:nth-child(6) img {
+        height: 340px;
+    }
+
+    .exhibition-stage .gallery-item-extra img {
+        height: 210px;
+    }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+    .site-header {
+        min-height: 68px;
+        padding: 0 6%;
+        gap: 12px;
+    }
+
+    .brand {
+        font-size: 17px;
+    }
+
+    .main-nav {
+        gap: 14px;
+    }
+
+    .main-nav a {
+        font-size: 8px;
+    }
+
+    .header-note {
+        display: none;
+    }
+
+    .hero {
+        min-height: 620px;
+        height: 88svh;
+        padding: 25px 6%;
+        background-position: 58% center;
+    }
+
+    .hero-meta,
+    .hero-bottom {
+        font-size: 8px;
+        gap: 10px;
+    }
+
+    .hero-meta span:last-child,
+    .hero-bottom span {
+        display: none;
+    }
+
+    .hero-title {
+        max-width: 100%;
+    }
+
+    .eyebrow {
+        font-size: 9px;
+        margin-bottom: 22px;
+    }
+
+    .hero-title h1 {
+        font-size: clamp(58px, 14.5vw, 88px);
+        line-height: 0.9;
+    }
+
+    .hero-description {
+        margin-top: 25px;
+        font-size: 12px;
+    }
+
+    .archive-intro {
+        padding: 70px 7%;
+        gap: 22px;
+    }
+
+    .archive-intro > p {
+        font-size: 29px;
+    }
+
+    .archive-section {
+        padding: 72px 6% 85px;
+    }
+
+    .section-heading {
+        align-items: start;
+        flex-direction: column;
+        gap: 18px;
+        margin-bottom: 38px;
+    }
+
+    .section-heading h2 {
+        font-size: clamp(49px, 13vw, 68px);
+        letter-spacing: -0.07em;
+    }
+
+    .exhibition-stage {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 34px 12px;
+    }
+
+    .exhibition-stage .gallery-item:nth-child(n) {
+        grid-column: 1 / 7;
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .exhibition-stage .gallery-item:nth-child(2),
+    .exhibition-stage .gallery-item:nth-child(5) {
+        width: 88%;
+        justify-self: end;
+    }
+
+    .exhibition-stage .gallery-item:nth-child(3),
+    .exhibition-stage .gallery-item:nth-child(6) {
+        width: 88%;
+    }
+
+    .exhibition-stage .gallery-item img,
+    .exhibition-stage .gallery-item:nth-child(n) img {
+        height: 390px;
+    }
+
+    .exhibition-stage .gallery-item:nth-child(1) img,
+    .exhibition-stage .gallery-item:nth-child(4) img {
+        height: 440px;
+    }
+
+    .exhibition-stage .gallery-item-extra {
+        width: 78% !important;
+        max-width: 78%;
+    }
+
+    .exhibition-stage .gallery-item-extra img {
+        height: 225px !important;
+    }
+
+    .image-caption {
+        font-size: 8px;
+        padding-top: 9px;
+    }
+
+    .closing-note {
+        min-height: 360px;
+        padding: 75px 7%;
+    }
+
+    .closing-note h2 {
+        font-size: clamp(40px, 10vw, 58px);
+        letter-spacing: -0.07em;
+    }
+
+    .site-footer {
+        flex-wrap: wrap;
+        padding: 23px 6%;
+        gap: 14px;
+    }
+
+    .site-footer > span {
+        order: 3;
+        width: 100%;
+        font-size: 8px;
+    }
+
+    /* Mobile lightbox */
+
+    .lightbox {
+        padding: 90px 6% 105px;
+    }
+
+    .lightbox-top {
+        padding: 18px 6%;
+    }
+
+    .lightbox-content img {
+        max-width: 100%;
+        max-height: 62vh;
+    }
+
+    .lightbox-caption {
+        font-size: 8px;
+    }
+
+    .lightbox-arrow {
+        top: auto;
+        bottom: 30px;
+        width: 42px;
+        height: 42px;
+    }
+
+    .lightbox-prev {
+        left: 30%;
+    }
+
+    .lightbox-next {
+        right: 30%;
+    }
+
+    .lightbox-footer {
+        display: none;
+    }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+    .main-nav {
+        gap: 10px;
+    }
+
+    .main-nav a {
+        font-size: 7px;
+    }
+
+    .hero-title h1 {
+        font-size: 56px;
+    }
+
+    .exhibition-stage .gallery-item img,
+    .exhibition-stage .gallery-item:nth-child(n) img {
+        height: 330px;
+    }
+
+    .exhibition-stage .gallery-item-extra img {
+        height: 190px !important;
+    }
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
