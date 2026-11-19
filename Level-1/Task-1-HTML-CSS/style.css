@@ -1,0 +1,431 @@
+
+/* =========================
+   1. GLOBAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --navy: #14243b;
+    --orange: #e9a45b;
+    --white: #ffffff;
+    --light: #f5f6f8;
+    --grey: #687386;
+    --dark: #182536;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--dark);
+    background: var(--white);
+    line-height: 1.7;
+}
+
+.container {
+    width: 88%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1, h2, .logo {
+    font-family: 'Manrope', sans-serif;
+}
+
+/* =========================
+   2. NAVIGATION
+========================= */
+
+.header {
+    background: var(--white);
+    border-bottom: 1px solid #edf0f3;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    min-height: 82px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--navy);
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--orange);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 38px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--orange);
+}
+
+.nav-button {
+    text-decoration: none;
+    background: var(--navy);
+    color: var(--white);
+    padding: 11px 22px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.nav-button:hover {
+    background: var(--orange);
+    color: var(--navy);
+}
+
+/* =========================
+   3. HERO SECTION
+========================= */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+    padding-top: 85px;
+    padding-bottom: 100px;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: #b57b3f;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    color: var(--navy);
+    font-size: clamp(36px, 4.3vw, 58px);
+    line-height: 1.15;
+    letter-spacing: -2px;
+    font-weight: 800;
+}
+
+.hero h1 span {
+    color: #c78b4f;
+}
+
+.hero-content p {
+    color: var(--grey);
+    margin-top: 23px;
+    max-width: 480px;
+    font-size: 16px;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 32px;
+}
+
+.primary-button,
+.secondary-button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 13px 23px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.primary-button {
+    background: var(--navy);
+    color: var(--white);
+}
+
+.primary-button:hover {
+    background: var(--orange);
+    color: var(--navy);
+    transform: translateY(-3px);
+}
+
+.secondary-button {
+    color: var(--navy);
+    border: 1px solid #d9dee6;
+}
+
+.secondary-button:hover {
+    background: var(--light);
+}
+
+.hero-image {
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    color: var(--white);
+    background: linear-gradient(transparent, rgba(0,0,0,0.75));
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 10px;
+    border-radius: 0 0 8px 8px;
+}
+
+.image-caption span:first-child {
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.image-caption span:last-child {
+    font-weight: 600;
+}
+
+/* =========================
+   4. ABOUT SECTION
+========================= */
+
+.about-section {
+    background: var(--light);
+    padding: 75px 0;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.about-content h2,
+.contact-heading h2 {
+    font-family: 'Manrope', sans-serif;
+    color: var(--navy);
+    font-size: 34px;
+    line-height: 1.3;
+}
+
+.about-content p {
+    color: var(--grey);
+    font-size: 15px;
+}
+
+/* =========================
+   5. CONTACT SECTION
+========================= */
+
+.contact-section {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.contact-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-heading p {
+    color: var(--grey);
+    margin-top: 12px;
+}
+
+.contact-form {
+    max-width: 650px;
+    margin: auto;
+    padding: 35px;
+    background: var(--light);
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #dce1e8;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 14px;
+    background: var(--white);
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--orange);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 5px;
+    background: var(--navy);
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-button:hover {
+    background: var(--orange);
+    color: var(--navy);
+}
+
+/* =========================
+   6. FOOTER
+========================= */
+
+.footer {
+    background: var(--navy);
+    padding: 28px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer .logo {
+    color: var(--white);
+}
+
+.footer p {
+    color: #c1c9d4;
+    font-size: 13px;
+}
+
+/* =========================
+   7. RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .navbar {
+        min-height: 72px;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 12px 0;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .nav-links {
+        gap: 18px;
+        font-size: 13px;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 55px;
+        padding-bottom: 65px;
+        gap: 35px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-image img {
+        height: 330px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .about-content h2,
+    .contact-heading h2 {
+        font-size: 28px;
+    }
+
+    .contact-form {
+        padding: 23px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .nav-links {
+        gap: 12px;
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .hero-actions a {
+        text-align: center;
+    }
+}
